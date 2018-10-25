@@ -1,6 +1,6 @@
 Dependencies for Project 'TEST', Target 'Target 1': (DO NOT MODIFY !)
 F (.\startup_stm32f40_41xxx.s)(0x542E6B02)(--cpu Cortex-M4.fp -g --apcs=interwork -I D:\PROJECTS\PROJECT\GITHUB\MPU_Elbow_Angle\USER\RTE-I D:\largesoftware\KEIL5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0-I D:\largesoftware\KEIL5\ARM\CMSIS\Include-I D:\largesoftware\KEIL5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Device\Include--pd "__UVISION_VERSION SETA 514" --pd "STM32F407xx SETA 1"--list ..\obj\startup_stm32f40_41xxx.lst --xref -o ..\obj\startup_stm32f40_41xxx.o --depend ..\obj\startup_stm32f40_41xxx.d)
-F (.\test.c)(0x5BD1383C)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USMART -I..\HARDWARE\LED -I..\HARDWARE\BEEP -I..\HARDWARE\KEY -I..\HARDWARE\EXTI -I..\HARDWARE\WDG -I..\HARDWARE\TIMER -I..\HARDWARE\TPAD -I..\HARDWARE\OLED -I..\HARDWARE\LCD -I..\HARDWARE\RTC -I..\HARDWARE\RNG -I..\HARDWARE\WKUP -I..\HARDWARE\ADC -I..\HARDWARE\LSENS -I..\HARDWARE\DAC -I..\HARDWARE\DMA -I..\HARDWARE\24CXX -I..\HARDWARE\SPI -I..\HARDWARE\W25QXX -I..\HARDWARE\RS485 -I..\HARDWARE\CAN -I..\HARDWARE\TOUCH -I..\HARDWARE\REMOTE -I..\HARDWARE\DS18B20 -I..\HARDWARE\DHT11 -I..\HARDWARE\MPU6050 -I..\HARDWARE\MPU6050\eMPL -I..\HARDWARE\quatcal -I..\HARDWARE\myiic2-I D:\PROJECTS\PROJECT\GITHUB\MPU_Elbow_Angle\USER\RTE-I D:\largesoftware\KEIL5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0-I D:\largesoftware\KEIL5\ARM\CMSIS\Include-I D:\largesoftware\KEIL5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Device\Include-D__UVISION_VERSION="514" -DSTM32F407xx -DSTM32F40_41xxx --C99-o ..\obj\test.o --omf_browse ..\obj\test.crf --depend ..\obj\test.d)
+F (.\test.c)(0x5BD17DF9)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USMART -I..\HARDWARE\LED -I..\HARDWARE\BEEP -I..\HARDWARE\KEY -I..\HARDWARE\EXTI -I..\HARDWARE\WDG -I..\HARDWARE\TIMER -I..\HARDWARE\TPAD -I..\HARDWARE\OLED -I..\HARDWARE\LCD -I..\HARDWARE\RTC -I..\HARDWARE\RNG -I..\HARDWARE\WKUP -I..\HARDWARE\ADC -I..\HARDWARE\LSENS -I..\HARDWARE\DAC -I..\HARDWARE\DMA -I..\HARDWARE\24CXX -I..\HARDWARE\SPI -I..\HARDWARE\W25QXX -I..\HARDWARE\RS485 -I..\HARDWARE\CAN -I..\HARDWARE\TOUCH -I..\HARDWARE\REMOTE -I..\HARDWARE\DS18B20 -I..\HARDWARE\DHT11 -I..\HARDWARE\MPU6050 -I..\HARDWARE\MPU6050\eMPL -I..\HARDWARE\quatcal -I..\HARDWARE\myiic2-I D:\PROJECTS\PROJECT\GITHUB\MPU_Elbow_Angle\USER\RTE-I D:\largesoftware\KEIL5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0-I D:\largesoftware\KEIL5\ARM\CMSIS\Include-I D:\largesoftware\KEIL5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Device\Include-D__UVISION_VERSION="514" -DSTM32F407xx -DSTM32F40_41xxx --C99-o ..\obj\test.o --omf_browse ..\obj\test.crf --depend ..\obj\test.d)
 I (..\SYSTEM\sys\sys.h)(0x555D4ABD)
 I (..\SYSTEM\sys\stm32f4xx.h)(0x53DBA488)
 I (..\SYSTEM\sys\core_cm4.h)(0x53C7D530)
@@ -21,7 +21,7 @@ I (..\USMART\usmart_str.h)(0x53FF1B0C)
 I (..\HARDWARE\MPU6050\mpu6050.h)(0x5BD061B5)
 I (..\HARDWARE\24CXX\myiic.h)(0x5BD0298E)
 I (..\HARDWARE\myiic2\myiic2.h)(0x5A377836)
-I (..\HARDWARE\MPU6050\eMPL\inv_mpu.h)(0x5BD138A0)
+I (..\HARDWARE\MPU6050\eMPL\inv_mpu.h)(0x5BD155A6)
 I (D:\largesoftware\KEIL5\ARM\ARMCC\include\math.h)(0x5475F2FE)
 I (..\HARDWARE\quatcal\quatcal.h)(0x5BCFDF0B)
 I (..\HARDWARE\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h)(0x5BD12F7A)
@@ -123,7 +123,7 @@ I (D:\largesoftware\KEIL5\ARM\ARMCC\include\stdint.h)(0x5475F300)
 I (D:\largesoftware\KEIL5\ARM\ARMCC\include\stdlib.h)(0x5475F300)
 I (D:\largesoftware\KEIL5\ARM\ARMCC\include\string.h)(0x5475F300)
 I (D:\largesoftware\KEIL5\ARM\ARMCC\include\math.h)(0x5475F2FE)
-I (..\HARDWARE\MPU6050\eMPL\inv_mpu.h)(0x5BD138A0)
+I (..\HARDWARE\MPU6050\eMPL\inv_mpu.h)(0x5BD155A6)
 I (..\SYSTEM\sys\stm32f4xx.h)(0x53DBA488)
 I (..\SYSTEM\sys\core_cm4.h)(0x53C7D530)
 I (..\SYSTEM\sys\core_cmInstr.h)(0x53C7D530)
@@ -143,7 +143,7 @@ I (D:\largesoftware\KEIL5\ARM\ARMCC\include\stdint.h)(0x5475F300)
 I (D:\largesoftware\KEIL5\ARM\ARMCC\include\stdlib.h)(0x5475F300)
 I (D:\largesoftware\KEIL5\ARM\ARMCC\include\string.h)(0x5475F300)
 I (D:\largesoftware\KEIL5\ARM\ARMCC\include\math.h)(0x5475F2FE)
-I (..\HARDWARE\MPU6050\eMPL\inv_mpu.h)(0x5BD138A0)
+I (..\HARDWARE\MPU6050\eMPL\inv_mpu.h)(0x5BD155A6)
 I (..\SYSTEM\sys\stm32f4xx.h)(0x53DBA488)
 I (..\SYSTEM\sys\core_cm4.h)(0x53C7D530)
 I (..\SYSTEM\sys\core_cmInstr.h)(0x53C7D530)
