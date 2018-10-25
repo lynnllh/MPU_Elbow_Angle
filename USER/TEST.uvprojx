@@ -365,7 +365,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F40_41xxx</Define>
               <Undefine></Undefine>
-              <IncludePath>..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\USMART;..\HARDWARE\LED;..\HARDWARE\BEEP;..\HARDWARE\KEY;..\HARDWARE\EXTI;..\HARDWARE\WDG;..\HARDWARE\TIMER;..\HARDWARE\TPAD;..\HARDWARE\OLED;..\HARDWARE\LCD;..\HARDWARE\RTC;..\HARDWARE\RNG;..\HARDWARE\WKUP;..\HARDWARE\ADC;..\HARDWARE\LSENS;..\HARDWARE\DAC;..\HARDWARE\DMA;..\HARDWARE\24CXX;..\HARDWARE\SPI;..\HARDWARE\W25QXX;..\HARDWARE\RS485;..\HARDWARE\CAN;..\HARDWARE\TOUCH;..\HARDWARE\REMOTE;..\HARDWARE\DS18B20;..\HARDWARE\DHT11;..\HARDWARE\MPU6050;..\HARDWARE\MPU6050\eMPL;..\HARDWARE\quatcal</IncludePath>
+              <IncludePath>..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\USMART;..\HARDWARE\LED;..\HARDWARE\BEEP;..\HARDWARE\KEY;..\HARDWARE\EXTI;..\HARDWARE\WDG;..\HARDWARE\TIMER;..\HARDWARE\TPAD;..\HARDWARE\OLED;..\HARDWARE\LCD;..\HARDWARE\RTC;..\HARDWARE\RNG;..\HARDWARE\WKUP;..\HARDWARE\ADC;..\HARDWARE\LSENS;..\HARDWARE\DAC;..\HARDWARE\DMA;..\HARDWARE\24CXX;..\HARDWARE\SPI;..\HARDWARE\W25QXX;..\HARDWARE\RS485;..\HARDWARE\CAN;..\HARDWARE\TOUCH;..\HARDWARE\REMOTE;..\HARDWARE\DS18B20;..\HARDWARE\DHT11;..\HARDWARE\MPU6050;..\HARDWARE\MPU6050\eMPL;..\HARDWARE\quatcal;..\HARDWARE\myiic2</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -487,6 +487,11 @@
               <FileName>quatcal.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HARDWARE\quatcal\quatcal.c</FilePath>
+            </File>
+            <File>
+              <FileName>myiic2.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\myiic2\myiic2.c</FilePath>
             </File>
           </Files>
         </Group>

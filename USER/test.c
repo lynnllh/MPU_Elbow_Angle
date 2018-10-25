@@ -33,18 +33,19 @@ int main(void)
 	LED_Init();					//初始化LED 
 	KEY_Init();					//初始化按键
  	LCD_Init();					//LCD初始化
-	MPU_Init();					//初始化MPU6050
+	MPU_Init(2);					//初始化MPU6050
  	POINT_COLOR=RED;//设置字体为红色 
 	LCD_ShowString(30,50,200,16,16,"Explorer STM32F4");	
 	LCD_ShowString(30,70,200,16,16,"MPU6050 TEST");	
 	LCD_ShowString(30,90,200,16,16,"ATOM@ALIENTEK");
 	LCD_ShowString(30,110,200,16,16,"2014/5/9");
-	while(mpu_dmp_init())
+	while(flag=mpu_dmp_init(2))
 	{
 		LCD_ShowString(30,130,200,16,16,"MPU6050 Error");
 		delay_ms(200);
 		LCD_Fill(30,130,239,130+16,WHITE);
  		delay_ms(200);
+		//printf("%d\n",flag);
 	}
 	LCD_ShowString(30,130,200,16,16,"MPU6050 OK");
 	LCD_ShowString(30,150,200,16,16,"KEY0:UPLOAD ON/OFF");
@@ -64,7 +65,7 @@ int main(void)
 			else LCD_ShowString(30,170,200,16,16,"UPLOAD OFF");
 		}
 	
-		if((flag=mpu_dmp_get_data(&pitch,&roll,&yaw,q))==0)
+		if((flag=mpu_dmp_get_data(&pitch,&roll,&yaw,q,2))==0)
 		{ 
 				if (WKUP_PRES==key)
 				{
@@ -72,9 +73,9 @@ int main(void)
 					mpu2_q_t[0]=q[0];mpu2_q_t[1]=q[1];mpu2_q_t[2]=q[2];mpu2_q_t[3]=q[3];
 					Quat_Inv(mpu2_q_t,mpu2_q_t_I);			
 				}
-			temp=MPU_Get_Temperature();	//得到温度值
-			MPU_Get_Accelerometer(&aacx,&aacy,&aacz);	//得到加速度传感器数据
-			MPU_Get_Gyroscope(&gyrox,&gyroy,&gyroz);	//得到陀螺仪数据
+			temp=MPU_Get_Temperature(2);	//得到温度值
+			MPU_Get_Accelerometer(&aacx,&aacy,&aacz,2);	//得到加速度传感器数据
+			MPU_Get_Gyroscope(&gyrox,&gyroy,&gyroz,2);	//得到陀螺仪数据
 			
 			if((t%10)==0)
 			{ 

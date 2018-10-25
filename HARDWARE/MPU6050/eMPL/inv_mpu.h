@@ -23,7 +23,7 @@
 #include "stm32f4xx.h"
 
 //定义输出速度
-#define DEFAULT_MPU_HZ  (100)		//100Hz
+#define DEFAULT_MPU_HZ  (200)		//100Hz
 
 #define INV_X_GYRO      (0x40)
 #define INV_Y_GYRO      (0x20)
@@ -62,78 +62,75 @@ struct int_param_s {
 #define MPU_INT_STATUS_DMP_5            (0x2000)
 
 /* Set up APIs */
-int mpu_init(void);
-int mpu_init_slave(void);
-int mpu_set_bypass(unsigned char bypass_on);
+int mpu_init(u8 device);
+int mpu_init_slave(u8 device);
+int mpu_set_bypass(unsigned char bypass_on,u8 device);
 
 /* Configuration APIs */
-int mpu_lp_accel_mode(unsigned char rate);
+int mpu_lp_accel_mode(unsigned char rate,u8 device);
 int mpu_lp_motion_interrupt(unsigned short thresh, unsigned char time,
-    unsigned char lpa_freq);
+    unsigned char lpa_freq,u8 device);
 int mpu_set_int_level(unsigned char active_low);
-int mpu_set_int_latched(unsigned char enable);
+int mpu_set_int_latched(unsigned char enable,u8 device);
 
-int mpu_set_dmp_state(unsigned char enable);
+int mpu_set_dmp_state(unsigned char enable,u8 device);
 int mpu_get_dmp_state(unsigned char *enabled);
 
 int mpu_get_lpf(unsigned short *lpf);
-int mpu_set_lpf(unsigned short lpf);
+int mpu_set_lpf(unsigned short lpf,u8 device);
 
 int mpu_get_gyro_fsr(unsigned short *fsr);
-int mpu_set_gyro_fsr(unsigned short fsr);
+int mpu_set_gyro_fsr(unsigned short fsr,u8 device);
 
 int mpu_get_accel_fsr(unsigned char *fsr);
-int mpu_set_accel_fsr(unsigned char fsr);
+int mpu_set_accel_fsr(unsigned char fsr,u8 device);
 
-int mpu_get_compass_fsr(unsigned short *fsr);
+
 
 int mpu_get_gyro_sens(float *sens);
 int mpu_get_accel_sens(unsigned short *sens);
 
 int mpu_get_sample_rate(unsigned short *rate);
-int mpu_set_sample_rate(unsigned short rate);
-int mpu_get_compass_sample_rate(unsigned short *rate);
-int mpu_set_compass_sample_rate(unsigned short rate);
+int mpu_set_sample_rate(unsigned short rate,u8 device);
 
 int mpu_get_fifo_config(unsigned char *sensors);
-int mpu_configure_fifo(unsigned char sensors);
+int mpu_configure_fifo(unsigned char sensors,u8 device);
 
 int mpu_get_power_state(unsigned char *power_on);
-int mpu_set_sensors(unsigned char sensors);
+int mpu_set_sensors(unsigned char sensors,u8 device);
 
-int mpu_set_accel_bias(const long *accel_bias);
+int mpu_set_accel_bias(const long *accel_bias,u8 device);
 
 /* Data getter/setter APIs */
-int mpu_get_gyro_reg(short *data, unsigned long *timestamp);
-int mpu_get_accel_reg(short *data, unsigned long *timestamp);
-int mpu_get_compass_reg(short *data, unsigned long *timestamp);
-int mpu_get_temperature(long *data, unsigned long *timestamp);
+int mpu_get_gyro_reg(short *data, unsigned long *timestamp,u8 device);
+int mpu_get_accel_reg(short *data, unsigned long *timestamp,u8 device);
+int mpu_get_temperature(long *data, unsigned long *timestamp,u8 device);
 
-int mpu_get_int_status(short *status);
+int mpu_get_int_status(short *status,u8 device);
 int mpu_read_fifo(short *gyro, short *accel, unsigned long *timestamp,
-    unsigned char *sensors, unsigned char *more);
+    unsigned char *sensors, unsigned char *more,u8 device);
 int mpu_read_fifo_stream(unsigned short length, unsigned char *data,
-    unsigned char *more);
-int mpu_reset_fifo(void);
+    unsigned char *more,u8 device);
+int mpu_reset_fifo(u8 device);
 
 int mpu_write_mem(unsigned short mem_addr, unsigned short length,
-    unsigned char *data);
+    unsigned char *data,u8 device);
 int mpu_read_mem(unsigned short mem_addr, unsigned short length,
-    unsigned char *data);
+    unsigned char *data,u8 device);
 int mpu_load_firmware(unsigned short length, const unsigned char *firmware,
-    unsigned short start_addr, unsigned short sample_rate);
+    unsigned short start_addr, unsigned short sample_rate,u8 device);
 
-int mpu_reg_dump(void);
-int mpu_read_reg(unsigned char reg, unsigned char *data);
-int mpu_run_self_test(long *gyro, long *accel);
-int mpu_register_tap_cb(void (*func)(unsigned char, unsigned char));
+int mpu_reg_dump(u8 device);
+int mpu_read_reg(unsigned char reg, unsigned char *data,u8 device);
+int mpu_run_self_test(long *gyro, long *accel,u8 device);
+int mpu_register_tap_cb(void (*func)(unsigned char, unsigned char,u8 device));
 //自行添加的一些函数
 void mget_ms(unsigned long *time);
 unsigned short inv_row_2_scale(const signed char *row);
 unsigned short inv_orientation_matrix_to_scalar(const signed char *mtx);
-u8 run_self_test(void);
-u8 mpu_dmp_init(void);
-u8 mpu_dmp_get_data(float *pitch,float *roll,float *yaw,float *q);
+u8 run_self_test(u8 device);
+u8 mpu_dmp_init(u8 device);
+u8 mpu_dmp_get_data(float *pitch,float *roll,float *yaw,float *q,u8 device);
 
 #endif  /* #ifndef _INV_MPU_H_ */
 

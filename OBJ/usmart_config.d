@@ -12,3 +12,4 @@
 ..\obj\usmart_config.o: ..\SYSTEM\sys\sys.h
 ..\obj\usmart_config.o: ..\HARDWARE\MPU6050\mpu6050.h
 ..\obj\usmart_config.o: ..\HARDWARE\24CXX\myiic.h
+..\obj\usmart_config.o: ..\HARDWARE\myiic2\myiic2.h

@@ -15,5 +15,6 @@
 ..\obj\inv_mpu.o: ..\HARDWARE\MPU6050\mpu6050.h
 ..\obj\inv_mpu.o: ..\HARDWARE\24CXX\myiic.h
 ..\obj\inv_mpu.o: ..\SYSTEM\sys\sys.h
+..\obj\inv_mpu.o: ..\HARDWARE\myiic2\myiic2.h
 ..\obj\inv_mpu.o: ..\SYSTEM\delay\delay.h
 ..\obj\inv_mpu.o: ..\SYSTEM\usart\usart.h

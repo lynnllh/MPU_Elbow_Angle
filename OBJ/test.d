@@ -18,6 +18,7 @@
 ..\obj\test.o: ..\USMART\usmart_str.h
 ..\obj\test.o: ..\HARDWARE\MPU6050\mpu6050.h
 ..\obj\test.o: ..\HARDWARE\24CXX\myiic.h
+..\obj\test.o: ..\HARDWARE\myiic2\myiic2.h
 ..\obj\test.o: ..\HARDWARE\MPU6050\eMPL\inv_mpu.h
 ..\obj\test.o: D:\largesoftware\KEIL5\ARM\ARMCC\Bin\..\include\math.h
 ..\obj\test.o: ..\HARDWARE\quatcal\quatcal.h
